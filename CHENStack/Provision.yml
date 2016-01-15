@@ -1,0 +1,20 @@
+---
+- name: Provision Nodejs Playground
+  hosts: nodejs
+  sudo: yes
+  user: root
+  roles:
+      - role: nvm
+        versions:
+            - "4.2.*"
+        default: "4.2.*"
+      - role: npm
+        global:
+            - { name: "gulp", version: "*", use: ["0.12"] }
+            - { name: "bower", version: "*", use: ["0.12"] }
+            - { name: "uglify-js", version: "*", use: ["0.12"] }
+            - { name: "coffee-script-redux", version: "*", use: ["0.11"] }
+            - { name: "typescript", version: "*", use: ["0.12"] }
+            - { name: "traceur", version: "*", use: ["0.12"] }
+        init:
+            - { dest: "{{ homedir }}/Playground", use: "0.12" }
