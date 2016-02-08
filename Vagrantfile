@@ -27,7 +27,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     couchdb.vm.box = couchdb_vars['box_name']
 
     couchdb.vm.provider :virtualbox do |vb|
-        vb.name = "CouchDB Playground"
+        vb.name = "cenkce.com counchdb"
 
         # Properly configure the vm to use the available amount of cores
         vb.customize ["modifyvm", :id, "--cpus", `#{RbConfig::CONFIG['host_os'] =~ /darwin/ ? 'sysctl -n hw.ncpu' : 'nproc'}`.chomp]
@@ -55,7 +55,7 @@ Vagrant.configure(VAGRANTFILE_API_VERSION) do |config|
     nodejs.vm.box = nodejs_vars['box_name']
 
     nodejs.vm.provider :virtualbox do |vb|
-        vb.name = "Nodejs Playground"
+        vb.name = "cenkce.com nodejs"
 
         # Properly configure the vm to use the available amount of cores
         vb.customize ["modifyvm", :id, "--cpus", `#{RbConfig::CONFIG['host_os'] =~ /darwin/ ? 'sysctl -n hw.ncpu' : 'nproc'}`.chomp]

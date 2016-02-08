@@ -14,13 +14,13 @@
         #dest: "{{ homedir }}/Playground"
         dest: "{{ homedir }}/Playground"
       - role: npm
-        global:
+        #global:
           #  - { name: "grunt-cli", version: "*", use: ["0.10", "0.11"] }
-            - { name: "gulp", version: "*", use: ["0.12"] }
-            - { name: "bower", version: "*", use: ["0.12"] }
-            - { name: "uglify-js", version: "*", use: ["0.12"] }
-            - { name: "coffee-script-redux", version: "*", use: ["0.11"] }
-            - { name: "typescript", version: "*", use: ["0.12"] }
-            - { name: "traceur", version: "*", use: ["0.12"] }
+          # - { name: "gulp", version: "*", use: ["0.12"] }
+          #  - { name: "bower", version: "*", use: ["0.12"] }
+          #  - { name: "uglify-js", version: "*", use: ["0.12"] }
+          #  - { name: "coffee-script-redux", version: "*", use: ["0.11"] }
+          #  - { name: "typescript", version: "*", use: ["0.12"] }
+          #  - { name: "traceur", version: "*", use: ["0.12"] }
         init:
             - { dest: "{{ homedir }}/Playground", use: "0.12" }
